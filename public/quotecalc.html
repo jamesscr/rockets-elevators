@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Rocket Elevators</title>
+	<meta name="description" content="Rocket Elevators" />
+	<meta name="Author" content="James [roelevators.com]" />
+
+	<!-- mobile settings -->
+	<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+	<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+	<!-- WEB FONTS : use %7C instead of | (pipe) -->
+	<link
+		href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700"
+		rel="stylesheet" type="text/css" />
+
+	<!-- CORE CSS -->
+
+	<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	
+	<!-- REVOLUTION SLIDER -->
+	<link href="assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
+	<link href="assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" />
+
+	<!-- FAVICON -->
+	<link rel='icon' href='./assets/images/favicon_package/favicon.ico' type='image/x-icon'>
+
+	<!-- THEME CSS -->
+	<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+	<!-- PAGE LEVEL SCRIPTS -->
+	<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/color_scheme/yellow.css" rel="stylesheet" type="text/css" id="color_scheme" />
+</head>
+
+<!--BODY-->
+
+<body class="smoothscroll enable-animation">
+
+	<!-- wrapper -->
+	<div id="wrapper">
+
+		<!-- Top Nav -->
+
+
+		<div id="header" class="navbar-toggleable-md sticky header-sm dark clearfix">
+
+
+			<header id="topNav">
+				<div class="container-fluid">
+
+					<!-- Mobile Menu Button -->
+					<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse"><i
+							class="fa fa-bars"></i>
+					</button>
+
+					<!-- Logo -->
+					<a class="logo float-left" href="index.html">
+						<img src="assets/images/R2.png" alt="logo">
+					</a>
+
+
+					<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+						<nav class="nav-main">
+
+
+							<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+								<li>
+									<!-- HOME -->
+									<a href="index.html">
+										HOME
+									</a>
+								</li>
+								<li>
+									<!-- SERVICES -->
+									<a href="index.html#services">
+										SERVICES
+									</a>
+								</li>
+								<li>
+									<!-- WORK -->
+									<a href="index.html#work">
+										PORTFOLIO
+									</a>
+								</li>
+								<li>
+									<!-- NEWS -->
+									<a href="index.html#news">
+										NEWS
+									</a>
+								</li>
+								<li>
+									<!-- CLIENTS -->
+									<a href="index.html#clients">
+										CLIENTS
+									</a>
+								</li>
+								<li>
+									<!-- CONTACT -->
+									<a href="index.html#contact">
+										CONTACT
+									</a>
+								</li>
+							</ul>
+
+						</nav>
+					</div>
+
+				</div>
+			</header>
+
+
+		</div>
+
+		<!-- /Top Bar -->
+
+
+<!-- <div class="jumbotron jumbotron-fluid">
+				<div class="container-fluid text-center">
+				  <h1>Get A Quote</h1>      
+				</div>
+			  </div> -->
+		<!-- /PAGE HEADER -->
+		
+		<section class="jumbotron jumbotron-fluid" style="background-image: url(http://www.californiafootgolfclub.com/static/img/footgolf-1.jpg); background-size: 100%;">
+			<h2 class="text-center">Get A Quote</h2>
+			<div class="container-fluid">
+				<!-- Useful Elements -->
+				<div class="card card-default">
+					<div class="card-heading card-heading-transparent">
+						<h2 class="card-title"></h2>
+					</div>
+
+					<div class="card-block">
+
+						<form class="validate" action="php/contact.php" method="post" enctype="multipart/form-data"
+							data-success="Sent! Thank you!" data-toastr-position="top-right">
+							<fieldset>
+								<!-- required [php action request] -->
+								<input type="hidden" name="action" value="contact_send" />
+
+								<div>
+									<div class="row">
+										<div class="col-md-2 col-sm-4">
+											<label>Choose Building Type*</label>
+											<select name="contact[Type]" class="form-control pointer required"
+												id="building">
+												<option value="0">------- Select -------</option>
+												<option value="1">Residential</option>
+												<option value="2">Commercial</option>
+												<option value="3">Corporate</option>
+												<option value="4">Hybrid</option>
+											</select>
+										</div>
+									</div>
+								</div>
+
+								<br />
+
+								<div id="residentialForm" style="display:none">
+									<!-- RESIDENTIAL FORM -->
+									<div class="row">
+										<div class="col-md-4 col-sm-4">
+											<label>Number of Apartments*</label>
+											<input type="number" name="residential[apartments]" value="" min="1"
+												class="form-control required resFields">
+										</div>
+										<div class="col-md-4 col-sm-4">
+											<label>Number of Floors*</label>
+											<input type="number" name="residential[floors]" value="" min="1"
+												class="form-control required resFields">
+										</div>
+										<div class="col-md-4 col-sm-4">
+											<label>Number of Basements*</label>
+											<input type="number" name="residential[basements]" value="" min="1"
+												class="form-control required">
+										</div>
+									</div>
+
+								</div> <!--/RESIDENTIAL FORM -->
+
+
+								<div id="commercialForm" style="display:none">
+									<!--COMMERCIAL FORM -->
+									<div class="row">
+										<div class="col-md-6 col-sm-6">
+											<label>Number of Distinct Businesses*</label>
+											<input type="number" name="commercial[businesses]" value="" min="1"
+												class="form-control required">
+										</div>
+										<div class="col-md-6 col-sm-6">
+											<label>Number of Floors*</label>
+											<input type="number" name="commercial[floors]" value="" min="1"
+												class="form-control required">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-4 col-sm-4">
+											<label>Number of Basements*</label>
+											<input type="number" name="commercial[basements]" value="" min="1"
+												class="form-control required">
+										</div>
+										<div class="col-md-4 col-sm-4">
+											<label>Number of Elevator Cages Needed*</label>
+											<input type="number" name="commercial[cages]" value="" min="1"
+												class="form-control required comField">
+										</div>
+										<div class="col-md-4 col-sm-4">
+											<label>Number of Parking Spaces*</label>
+											<input type="number" name="commercial[parking]" value="" min="1"
+												class="form-control required">
+										</div>
+									</div>
+
+								</div> <!--/COMMERCIAL FORM -->
+
+								<div id="corporateForm" style="display:none">
+									<!--CORPORATE FORM -->
+									<div class="row">
+										<div class="col-md-6 col-sm-6">
+											<label>Number of Separate Tenant Companies*</label>
+											<input type="number" name="contact[companies]" value="" min="1"
+												class="form-control required">
+										</div>
+										<div class="col-md-6 col-sm-6">
+											<label>Number of Floors*</label>
+											<input type="number" name="contact[floors]" value="" min="1"
+												class="form-control required corporateField">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-4 col-sm-4">
+											<label>Number of Basements*</label>
+											<input type="number" name="contact[basements]" value="" min="1"
+												class="form-control required corporateField">
+										</div>
+										<div class="col-md-4 col-sm-4">
+											<label>Number of Parking Spaces*</label>
+											<input type="number" name="contact[parking]" value="" min="1"
+												class="form-control required">
+										</div>
+										<div class="col-md-4 col-sm-4">
+											<label>Number of Occupants per Floor*</label>
+											<input type="number" name="contact[occupants]" value="" min="1"
+												class="form-control required corporateField">
+										</div>
+									</div>
+
+								</div>
+								<!--/CORPORATE FORM-->
+
+								<div id="hybridForm" style="display:none">
+									<!--  HYBRID FORM -->
+									<div class="row">
+										<div class="col-md-4 col-sm-4">
+											<label>Number of Distinct Businesses*</label>
+											<input type="number" name="contact[businesses]" value="" min="1"
+												class="form-control required">
+										</div>
+										<div class="col-md-4 col-sm-4">
+											<label>Number of Floors*</label>
+											<input type="number" name="contact[floors]" value="" min="1"
+												class="form-control required hybFields">
+										</div>
+										<div class="col-md-4 col-sm-4">
+											<label>Number of Basements*</label>
+											<input type="number" name="contact[basements]" value="" min="1"
+												class="form-control required hybFields">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-4 col-sm-4">
+											<label>Number of Parking Spaces*</label>
+											<input type="number" name="contact[parking]" value="" min="1"
+												class="form-control required">
+										</div>
+										<div class="col-md-4 col-sm-4">
+											<label>Max Occupants per Floor*</label>
+											<input type="number" name="contact[occupants]" value="" min="1"
+												class="form-control required hybFields">
+										</div>
+										<div class="col-md-4 col-sm-4">
+											<label>Number of Hours of Activity*</label>
+											<input type="number" name="contact[activity]" value="" min="1" max="24"
+												class="form-control required">
+										</div>
+									</div>
+
+								</div>
+								<!--/HYBRID FORM-->
+
+								<br />
+
+								<div class="row">
+									<div class="col-md-4 col-sm-4">
+										<label>Number of Elevators*</label>
+										<input type="text" name="contact[elevatorsHyb]" value="0"
+											class="form-control required elevator" readonly>
+									</div>
+								</div>
+
+								<hr>
+
+								<div>
+									<!-- PRICES SELECTION-->
+									<div class="radioButtons">
+										<h4>Select the range of elevators : </h4>
+										<div class="row" style="justify-content: space-around;" id="radioButtons">
+
+											<label for="standard"> <input type="radio" id="standard" name="radio"
+													onclick="packagePrice()" class="buttons" value="0">
+												Standard </label>
+
+
+											<label for="premium"> <input type="radio" id="premium" name="radio"
+													onclick="packagePrice()" class="buttons" value="1">
+												Premium </label>
+
+
+											<label for="excelium"> <input type="radio" id="excelium" class="buttons"
+													onclick="packagePrice()" name="radio" value="2">
+												Excelium </label>
+										</div>
+										<br>
+										<div class="row">
+											<div class="col-md-4 col-sm-4">
+												<label>Unit price</label>
+												<input type="text" name="price" value=""
+														class="form-control required unitNum" readonly>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4 col-sm-4">
+												<label>Elevators price</label> 
+												<input type="text" name="price" value=""
+														class="form-control required price" readonly>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4 col-sm-4">
+												<label>Installation fees</label>
+												<input type="text" name="installation" value=""
+													class="form-control required installation" readonly>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4 col-sm-4">
+												<label>Total Price</label>
+												<input type="text" name="installation" value=""
+													class="form-control required total" readonly>
+											</div>
+										</div>
+									</div>
+								</div>
+							</fieldset>
+						</form>
+
+					</div>
+					<!-- /PRICES SELECTION-->
+				</div>
+			</div>
+
+	</div>
+
+	<!-- SUBMIT Button -->
+	<!-- /SUBMIT Button -->
+
+	<!--  Parallax -->
+
+	<section class="parallax parallax-1" style="background-image: url('/assets/images/AdobeStock_73868131.jpeg');">
+
+
+		<div class="container">
+
+			<div class="text-center">
+				<h2 class="fs-40 fw-300">The company has been in business since 1976</h2>
+			</div>
+
+		</div>
+	</section>
+
+	<!-- /Parallax -->
+
+	<!-- FOOTER -->
+	<footer id="footer">
+		<div class="container">
+
+
+			<div class="row">
+
+				<!-- col #1 -->
+				<div class="col-md-8">
+
+					<h6><i class="icon-phone"></i> Call us?</h6>
+
+					<p>Building the world of tomorrow involves a lot of things than doing business.
+						You are looking to meet the right partner for you project, we can provide the best
+						advices for the management.
+						<br>
+						Rocket Elevators is in service since 1976! </p>
+					<h2></strong> <a href="tel:(438)-825-5455">438-825-5455</a></span></h2>
+				</div>
+				<!-- /col #1 -->
+
+				<!-- col #2 -->
+				<div class="col-md-4">
+					<h3 class="letter-spacing-1">KEEP IN TOUCH</h3>
+
+					<!-- Newsletter Form -->
+					<p>Subscribe to Our Newsletter to get Important News & Offers</p>
+
+					<form class="validate" action="php/newsletter.php" method="post"
+						data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
+						<div class="input-group">
+							<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+							<input type="email" id="email" name="email" class="form-control required"
+								placeholder="Enter your Email">
+							<span class="input-group-btn">
+								<button class="btn btn-success" type="submit">Subscribe</button>
+							</span>
+						</div>
+					</form>
+					<!-- /Newsletter Form -->
+
+
+				</div>
+				<!-- /col #2 -->
+
+			</div>
+
+
+		</div>
+
+		<div class="copyright">
+			<div class="container">
+				<ul class="float-right m-0 list-inline mobile-block submenu-dark">
+					<li><a href="#">Terms &amp; Conditions</a></li>
+					<li>&bull;</li>
+					<li><a href="#">Privacy</a></li>
+				</ul>
+				&copy; All Rights Reserved, Company LTD
+			</div>
+		</div>
+
+	</footer>
+	<!-- /FOOTER -->
+
+	</div>
+	<!-- /wrapper -->
+
+	<!-- SCROLL TO TOP -->
+	<a href="#" id="toTop"></a>
+
+
+	<!-- PRELOADER -->
+	<div id="preloader">
+		<div class="inner">
+			<span class="loader"></span>
+		</div>
+	</div><!-- /PRELOADER -->
+
+	<!-- JAVASCRIPT FILES -->
+	<script>
+		var plugin_path = 'assets/plugins/';
+	</script>
+	<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+
+	<script src="assets/js/scripts.js"></script>
+	<script src="assets/js/quote.js"></script>
+</body>
+</html>

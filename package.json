@@ -1,0 +1,22 @@
+{
+	"name": "rockets-elevators",
+	"version": "1.0.0",
+	"private": true,
+	"main": "app.js",
+	"scripts": {
+		"start": "nodemon ./bin/www",
+		"start:prod": "SET NODE_ENV=production & nodemon ./bin/www"
+	},
+	"dependencies": {
+		"cookie-parser": "~1.4.4",
+		"debug": "~2.6.9",
+		"express": "~4.16.1",
+		"gh-pages": "^3.2.3",
+		"http-errors": "~1.6.3",
+		"jade": "^1.9.2",
+		"morgan": "~1.9.1"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.16"
+	}
+}
